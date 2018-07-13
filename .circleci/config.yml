@@ -164,7 +164,7 @@ jobs:
     steps:
       - checkout
       - run: cd test-results
-      - run: dd if=/dev/zero of=output.dat  bs=200M  count=50
+      - run: dd if=/dev/zero of=test-results/output.dat  bs=200M  count=50
       - store_test_results:
           path: test-results
   
