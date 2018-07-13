@@ -194,30 +194,29 @@ jobs:
 
 workflows:
   version: 2
--  resource_class_jobs:
--    jobs:
--      - small
--      - medium
--      - medium-plus
--      - large
--
--  vm_jobs:
--    jobs:
--      - machine
--      - remote_docker
--      - docker_layer_caching
--      - machine_dlc
+  resource_class_jobs:
+    jobs:
+      - small
+      - medium
+      - medium-plus
+      - large
+  vm_jobs:
+    jobs:
+      - machine
+      - remote_docker
+      - docker_layer_caching
+      - machine_dlc
  
    feature_jobs:
      jobs:
-       - create_large_file
--      - save_and_restore_cache
--      - contexts:
--          context: org-global
--      - multi-contexts:
--          context: individual-local
--      - write_workspace
--      - read_workspace:
--          requires:
--            - write_workspace
+      - create_large_file
+      - save_and_restore_cache
+      - contexts:
+          context: org-global
+      - multi-contexts:
+          context: individual-local
+      - write_workspace
+      - read_workspace:
+          requires:
+            - write_workspace
        - artifacts_test_results
