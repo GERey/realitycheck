@@ -169,7 +169,6 @@ jobs:
 
   
   artifacts_test_results:
-  
     docker:
       - image: nvidia/cuda
     working_directory: ~/realitycheck
@@ -196,7 +195,6 @@ jobs:
 
 workflows:
   version: 2
-  resource_class_jobs:
 
   feature_jobs:
     jobs:
