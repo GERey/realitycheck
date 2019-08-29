@@ -38,6 +38,7 @@ machine: &machine
         sleep $SLEEP
         date
         echo 'Done sleeping.'
+        echo 'really I am'
 
 remote_docker_executor: &remote_docker_executor
   docker: [{image: 'docker:17.06-git'}]
