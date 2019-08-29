@@ -45,7 +45,7 @@ jobs:
 
   tiny: # 1 vCPUs, 1GB RAM
     <<: *resource_job_defaults
-    resource_class: tiny
+    resource_class: xlarge
 
   # vm jobs
   machine:
