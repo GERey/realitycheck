@@ -94,7 +94,6 @@ jobs:
           docker_layer_caching: true
       - run: docker build --tag throwaway:$CIRCLE_BUILD_NUM .
       - run: docker version
-      - run: echo $TEST
 
   machine_dlc:
     machine:
