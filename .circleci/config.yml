@@ -104,7 +104,6 @@ jobs:
       - run:
           <<: *basic_docker_build
       - run: docker version
-      - run: echo $TEST
 
   # feature jobs
   contexts:
