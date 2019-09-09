@@ -3,7 +3,7 @@ version: 2
 resource_job_defaults: &resource_job_defaults
   docker:  [{image: 'circleci/ruby:2.4.1'}]
   steps:
-    - run: echo "hi"
+    - run: echo $test
 
 remote_docker_defaults: &remote_docker_defaults
   docker: [{image: 'docker:17.06-git'}]
