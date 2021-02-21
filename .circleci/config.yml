@@ -43,7 +43,7 @@ jobs:
     <<: *resource_job_defaults
     resource_class: large
 
-  xlarge: # 8 vCPUs, 16GB RAM
+  tiny: # 1 vCPUs, 1GB RAM
     <<: *resource_job_defaults
     resource_class: xlarge
 
@@ -94,6 +94,7 @@ jobs:
           docker_layer_caching: true
       - run: docker build --tag throwaway:$CIRCLE_BUILD_NUM .
       - run: docker version
+      - run: echo $TEST
 
   machine_dlc:
     machine:
@@ -201,7 +202,7 @@ workflows:
       - medium
       - medium+
       - large
-      - xlarge
+      - tiny
 
   vm_jobs:
     jobs:
